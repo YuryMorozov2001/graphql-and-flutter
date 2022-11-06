@@ -13,6 +13,7 @@ class GraphQlSubPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: const Text('gql subscription'),),
       body: Column(
         children: const [
           CreateUserWidget(),
