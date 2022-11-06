@@ -13,15 +13,28 @@ class GraphQlSubPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('gql subscription'),),
-      body: Column(
-        children: const [
-          CreateUserWidget(),
-          TodoOperationWidget(isCreateMode: true),
-          TodoOperationWidget(isCreateMode: false),
-          Expanded(child: GraphQLSubBody()),
-        ],
+      appBar: AppBar(
+        title: const Text('gql subscription'),
+        centerTitle: true,
       ),
+      body: LayoutBuilder(builder: (_, q) {
+        return Center(
+          child: SizedBox(
+            width: q.maxWidth > 600 ? 600 : q.maxWidth,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              child: Column(
+                children: const [
+                  CreateUserWidget(),
+                  TodoOperationWidget(isCreateMode: true),
+                  TodoOperationWidget(isCreateMode: false),
+                  Expanded(child: GraphQLSubBody()),
+                ],
+              ),
+            ),
+          ),
+        );
+      }),
     );
   }
 }
