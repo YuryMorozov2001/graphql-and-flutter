@@ -1,5 +1,5 @@
 # Flutter + GraphQL 
-<img src="https://github.com/YuryMorozov2001/graphql-and-flutter/.gitHub/images/preview.gif" alt="preview">
+<img src="https://github.com/YuryMorozov2001/graphql-and-flutter/raw/main/.github/images/preview.gif" alt="preview">
 
 Hi! This repository will contain flutter applications using various libraries designed to work with GraphQL.
 
@@ -38,7 +38,7 @@ You can read about how to create a database and a schema here:
 
 Create simple tables following this diagram:
 
-<img src="https://github.com/YuryMorozov2001/graphql-and-flutter/.gitHub/images/db.png" alt="diogram">
+<img src="https://github.com/YuryMorozov2001/graphql-and-flutter/raw/main/.github/images/db.png" alt="diogram">
 
 Congrats! Now you can make a request to a GraphQL API!
 
