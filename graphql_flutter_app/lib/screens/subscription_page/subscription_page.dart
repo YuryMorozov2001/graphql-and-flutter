@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
+import 'package:graphql_flutter_app/screens/subscription_page/widgets/create_user_widget.dart';
 
 import '../../graphql/request/requester.dart';
 import '../../model/user.dart';
@@ -13,6 +14,7 @@ class GraphQlSubPage extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: const [
+          CreateUserWidget(),
           Expanded(child: GraphQLSubBody()),
         ],
       ),
@@ -28,7 +30,7 @@ class GraphQLSubBody extends StatelessWidget {
     return Subscription(
       options: SubscriptionOptions(
         fetchPolicy: FetchPolicy.cacheAndNetwork,
-        document: GQLRequester.user.subscription.get(),
+        document: GQLRequester.user.subscription.getWithTask(),
       ),
       builder: (result) {
         if (result.hasException) {

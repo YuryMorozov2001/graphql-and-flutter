@@ -1,4 +1,3 @@
-
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
@@ -34,7 +33,7 @@ class UserWidget extends StatelessWidget {
                     options: MutationOptions(
                       document: GQLRequester.user.mutation.deleteByPk(),
                       fetchPolicy: FetchPolicy.cacheAndNetwork,
-                      update: (cache, result) => cache, 
+                      update: (cache, result) => cache,
                     ),
                     builder: (runMutation, result) => GestureDetector(
                       onTap: () => runMutation({"id": user.id}),
@@ -55,10 +54,10 @@ class UserWidget extends StatelessWidget {
                               Text('${index + 1}.'),
                               Mutation(
                                 options: MutationOptions(
-                                  document:
-                                      GQLRequester.todo.mutation.updateByUserId(),
+                                  document: GQLRequester.todo.mutation
+                                      .updateByUserId(),
                                   fetchPolicy: FetchPolicy.cacheAndNetwork,
-                                  update: (cache, result) => cache, 
+                                  update: (cache, result) => cache,
                                 ),
                                 builder: (runMutation, result) {
                                   return Checkbox(
