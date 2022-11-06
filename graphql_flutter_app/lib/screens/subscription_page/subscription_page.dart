@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
-import 'package:graphql_flutter_app/screens/subscription_page/widgets/create_user_widget.dart';
-import 'package:graphql_flutter_app/screens/subscription_page/widgets/todo_operation_widget.dart';
+import 'widgets/create_user_widget.dart';
+import 'widgets/todo_operation_widget.dart';
 
 import '../../graphql/request/requester.dart';
 import '../../model/user.dart';

@@ -1,4 +1,4 @@
-import 'package:graphql_flutter_app/model/todo.dart';
+import 'todo.dart';
 
 class User {
   User({
