@@ -5,10 +5,10 @@ Hi! This repository will contain flutter applications using various libraries de
 
 ### todo:
 - [X] graphql_flutter
+- [X] graphql_flutter with hooks
+- [ ] graphql_flutter with code gen
 - [ ] just graphql
-- [ ] graphql with hooks
-- [ ] graphql with code gen
-
+   
 ## Getting started
 
 ## Hasura
