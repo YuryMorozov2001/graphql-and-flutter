@@ -4,6 +4,7 @@ import 'package:graphql_hooks_flutter_app/graphql/request/requester.dart';
 import 'package:graphql_hooks_flutter_app/model/user.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:graphql_hooks_flutter_app/screens/subscription_page/widgets/create_user_widget.dart';
+import 'package:graphql_hooks_flutter_app/screens/subscription_page/widgets/todo_operation_widget.dart';
 
 import 'widgets/user_widget.dart';
 
@@ -22,6 +23,8 @@ class GraphQlSubPage extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Column(children: const [
             CreateUserWidget(),
+            TodoOperationWidget(isCreateMode: true),
+            TodoOperationWidget(isCreateMode: false),
             GraphQLSubBody(),
           ]),
         ),
