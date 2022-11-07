@@ -18,17 +18,22 @@ class GraphQlSubPage extends StatelessWidget {
         title: const Text('gql subscription'),
         centerTitle: true,
       ),
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: Column(children: const [
-            CreateUserWidget(),
-            TodoOperationWidget(isCreateMode: true),
-            TodoOperationWidget(isCreateMode: false),
-            GraphQLSubBody(),
-          ]),
-        ),
-      ),
+      body: LayoutBuilder(builder: (_, c) {
+        return Center(
+          child: SizedBox(
+            width: c.maxWidth > 600 ? 600 : c.maxWidth,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: Column(children: const [
+                CreateUserWidget(),
+                TodoOperationWidget(isCreateMode: true),
+                TodoOperationWidget(isCreateMode: false),
+                Expanded(child: GraphQLSubBody()),
+              ]),
+            ),
+          ),
+        );
+      }),
     );
   }
 }
@@ -51,7 +56,6 @@ class GraphQLSubBody extends HookWidget {
     }
     final List<User> users = userResult.map((e) => User.fromMap(e)).toList();
     return ListView.builder(
-      shrinkWrap: true,
       itemBuilder: (context, index) => UserWidget(user: users[index]),
       itemCount: users.length,
     );

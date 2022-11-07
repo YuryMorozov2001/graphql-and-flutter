@@ -18,6 +18,7 @@ class UserWidget extends HookWidget {
     ));
     final updateTodo = useMutation(MutationOptions(
       document: GQLRequester.todo.mutation.updateByUserId(),
+      update: (cache, result) => cache,
     ));
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8.0),
