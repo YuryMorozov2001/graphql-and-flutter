@@ -1,0 +1,26 @@
+query GetUsers {
+  user {
+    id
+    name
+    age
+  }
+}
+
+query GetUsersWithTodo {
+  user {
+    id
+    name
+    age
+    todos {
+      task
+    }
+  }
+}
+
+query GetUserByPK($id: Int!) {
+  user_by_pk(id: $id) {
+    id
+    name
+    age
+  }
+}
