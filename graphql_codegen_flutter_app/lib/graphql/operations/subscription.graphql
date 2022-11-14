@@ -1,0 +1,10 @@
+subscription SubUsers {
+  user {
+    id
+    name
+    age
+    todos {
+      task
+    }
+  }
+}
