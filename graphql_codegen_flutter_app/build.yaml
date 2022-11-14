@@ -7,3 +7,4 @@ targets:
             - graphql
             - graphql_flutter 
           outputDirectory: __generated
+          addTypenameExcludedPaths: ["subscription", "subscription.foobar"]
