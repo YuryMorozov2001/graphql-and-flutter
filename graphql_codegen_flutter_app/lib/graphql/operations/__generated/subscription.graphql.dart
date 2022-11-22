@@ -1,5 +1,3 @@
-// ignore_for_file: type=lint
-
 import 'dart:async';
 import 'package:flutter/widgets.dart' as widgets;
 import 'package:gql/ast.dart';

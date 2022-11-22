@@ -1,4 +1,3 @@
-// ignore_for_file: type=lint
 class Input$Int_comparison_exp {
   factory Input$Int_comparison_exp({
     int? $_eq,

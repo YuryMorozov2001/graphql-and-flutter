@@ -1,4 +1,3 @@
-// ignore_for_file: type=lint
 import 'package:flutter/widgets.dart' as widgets;
 import 'package:gql/ast.dart';
 import 'package:graphql/client.dart' as graphql;
