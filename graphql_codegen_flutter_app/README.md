@@ -12,10 +12,17 @@ You can configure generation options in the `build.yaml`.
 Learn more about generation options [here](https://pub.dev/packages/graphql_codegen#options)
 
 ### Ignoring warnings
-After generation, you may get a lot of warnings, so you can ignore it. To do this, add this line to the generated file: 
+After generation, you may get a lot of warnings, so you can ignore it. Let's add this code to the `analysis_options.yaml` file:
+```yaml
+analyzer:
+  exclude:
+    - "**/*.graphql.dart"
+```
+Or you can add this line to the generated file:
 ```dart
 // ignore_for_file: type=lint
 ```
+
 ## Solving errors 
 
 ### Subscription error
